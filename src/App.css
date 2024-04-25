@@ -1,0 +1,379 @@
+/* Global Styles */
+.background-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-width: 100%;
+  font-family: 'Heebo', 'Archivo', serif;
+}
+
+.home {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+}
+
+.right-align {
+  text-align: right;
+  direction: rtl;
+}
+
+
+.input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgba(204, 204, 204, 0.5);
+  /* Transparent border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Slightly transparent background */
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.suggestion:hover {
+  background-color: #ffffff;
+}
+
+.city {
+  padding-top: 40px;
+  /* padding-left: 5%;
+  padding-right: 5%; */
+}
+
+.description {
+  padding-left: 5%;
+}
+
+.desc {
+  padding-left: 5%;
+  width: 80%;
+}
+
+.empty{
+  max-width: 60%;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.card {
+  padding-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card img {
+  max-width: 100%;
+  align-self: center;
+  padding-bottom: 5px;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.welcome-heading {
+  font-size: 36px;
+  color: #fff;
+  padding-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  /* Add this line for shadow effect */
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #13044b;
+  padding-bottom: 0px;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+  font-family: 'Heebo', 'Archivo', serif;
+}
+
+
+.current-text {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.current-subtext {
+  font-size: 20px;
+  color: #13044b;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.tiny-text {
+  font-size: 18px;
+  color: #13044b;
+
+}
+
+.current-icon {
+  width: 90%;
+  text-align: right;
+}
+
+.right {
+  align-self: flex-end;
+  align-items: end;
+}
+
+
+/* Button */
+.button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #13044b !important;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #ffc400 !important;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  font-family: 'Heebo', 'Archivo', serif !important;
+}
+
+
+
+.button:hover,
+.button:focus {
+  background-color: #BD3D7E;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.left {
+  width: 70%;
+  padding-top: 10px;
+  justify-self: end;
+  text-align: left;
+}
+
+.next-days {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.icon-buttons {
+  color: #13044b !important;
+}
+
+.favo {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.favo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.favo-wrapper {
+  width: 48%;
+  /* Adjust the width as needed */
+  margin-bottom: 10px;
+}
+
+.favo-text {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.favo-subtext {
+  font-size: 20px;
+  color: #13044b;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.tiny-favo-text {
+  font-size: 18px;
+  color: #13044b;
+
+}
+
+.favo-icon {
+  width: 90%;
+  text-align: right;
+}
+
+.favo-left {
+  padding-top: 10px;
+  justify-self: end;
+  align-self: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 650px) {
+  .home {
+    padding-top: 0px;
+  }
+
+  .city {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .icon {
+    padding-top: 5px;
+  }
+
+  .left {
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+  }
+
+
+  .maintxt {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .favo-wrapper {
+    width: 100%;
+    /* Ensure cards take full width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .background-wrapper {
+    background: linear-gradient(to bottom, #6372c9, #1b4bcf);
+    /* Adjust the colors as needed */
+  }
+
+  .container-fluid {
+    /* width: 100%; */
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .current-icon {
+    width: 50%;
+    text-align: right;
+  }
+
+  .favo-text {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .favo-subtext {
+    font-size: 10px;
+    color: #13044b;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  .favo-icon {
+    width: 50%;
+    text-align: right;
+  }
+
+  .favo-container {
+    display: block;
+    /* Change to block layout for smaller screens */
+  }
+
+  .favo-wrapper {
+    margin-bottom: 20px;
+    /* Increase margin for better spacing */
+  }
+
+  .favo-left,
+  .col-sm-2 {
+    text-align: center;
+    /* Center align text/icons on smaller screens */
+  }
+
+  .col {
+    margin-top: 20px;
+    max-width: 60% !important;
+    /* Add space between columns on smaller screens */
+  }
+
+  .favo-text {
+    text-align: center;
+    /* Center align text on smaller screens */
+  }
+
+  .favo-left {
+    text-align: center;
+    /* Center align button container on smaller screens */
+    margin-top: 10px;
+    /* Add some space between content and buttons */
+  }
+
+  .icon-buttons {
+    margin-left: 10px;
+    /* Add space between icon buttons on smaller screens */
+  }
+}

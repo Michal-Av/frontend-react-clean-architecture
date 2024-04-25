@@ -1,0 +1,144 @@
+.home {
+  width: 100%;
+  background: url('./images/beatiful-clear-bluesky.jpg') no-repeat fixed;
+  background-size: cover;
+  /* Use 'cover' to ensure the image covers the entire container */
+  background-position: center;
+  /* Center the background image */
+  height: 100vh;
+  margin-top: 0px;
+  font-family: 'Archivo',
+    serif;
+}
+
+.welcome-section {
+  text-align: center;
+  /* Center align the content */
+  margin-bottom: 30px;
+  /* Add some space below the welcome section */
+}
+
+.welcome-heading {
+  font-size: 36px;
+  /* Adjust font size */
+  color: #333;
+  /* Set text color */
+  margin-bottom: 10px;
+  /* Add space below the heading */
+}
+
+.welcome-text {
+  font-size: 18px;
+  /* Adjust font size */
+  color: #666;
+  /* Set text color */
+}
+
+.city {
+  width: 90%;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.suggestion {
+  cursor: pointer;
+  background-color: white;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.suggestion:hover {
+  background-color: gray;
+}
+
+.icon {
+  padding-top: 10px;
+
+}
+
+.button {
+  align-items: center;
+  background-clip: padding-box;
+  color: #BD3D7E;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #BD3D7E;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.left {
+  width: 70%;
+  padding-top: 10px;
+  justify-self: end;
+}
+
+@media (min-width: 651px) {
+  .maintxt {
+    font-size: 100px;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .maintxt {
+    font-size: 60px;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    text-align: center;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    text-align: center;
+  }
+}
