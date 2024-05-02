@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "../components/UIElements/select/LanguageSelector";
+import LanguageSelector from "../components/UIElements/Select/LanguageSelector";
 
 const Test = () => {
     const { t } = useTranslation();

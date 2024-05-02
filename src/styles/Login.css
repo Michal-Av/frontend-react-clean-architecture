@@ -1,0 +1,49 @@
+/* LoginComp.css */
+.main-page {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+
+  /* Sidebar.css */
+.sidebar {
+  width: 20%;
+  background: linear-gradient(to bottom, #002144, #025a77);
+  color: #fff;
+  padding: 20px;
+  min-height: 940px;
+  text-align: start;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* MainContent.css */
+.main-content {
+  width: 75%;
+}
+
+.main-content img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px; /* Adjust the width of the logo as needed */
+  height: auto;
+}
