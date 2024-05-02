@@ -2,21 +2,25 @@
 import React, { useState } from 'react';
 import FormField from './FormField';
 import './Form.css';
+import { useTranslation } from 'react-i18next';
 
 const Form = ({ onSubmit, message, fields, buttonText, actionText, onActionClick }) => {
-  const [formData, setFormData] = useState(fields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {}));
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
-
-  return (
-    <div className="login-form">
-      <h3>{actionText}</h3>
+    const [formData, setFormData] = useState(fields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {}));
+    const { t, i18n } = useTranslation();
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      onSubmit(formData);
+    };
+  
+    const formAlignmentClass = i18n.language === 'he' ? 'login-form-right' : 'login-form-left'; // Check language direction
+  
+    return (
+      <div className={`login-form ${formAlignmentClass}`}> {/* Apply the appropriate alignment class */}
+         <h3>{t(actionText)}</h3>
       <div>
-        {actionText === "Log in to your account" && <>Don't have an account? <a href="#" onClick={onActionClick}>Sign Up</a></>}
-        {actionText === "Create your account" && <>Have an account? <a href="#" onClick={onActionClick}>Log in now</a></>}
+        {actionText === t("Log in to your account") && <>{t("Don't have an account?")} <a href="#" onClick={onActionClick}>{t("Sign Up")}</a></>}
+        {actionText === t("Create your account") && <>{t("Have an account?")} <a href="#" onClick={onActionClick}>{t("Log in now")}</a></>}
       </div>
       <br></br>
       <form onSubmit={handleSubmit}>

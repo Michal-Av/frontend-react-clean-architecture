@@ -2,25 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import Form from '../components/Containers/Form/Form';
 import { login, signup } from '../services/api-auth';
+import { useTranslation  } from "react-i18next";
 import '../styles/Login.css';
+import LanguageSelector from "../components/UIElements/Select/LanguageSelector";
 import Logo from '../assets/images/logo/3.png';
-
-const loginFields = [
-  { label: "User Name :", type: "text", name: "username", placeholder: "Enter your username" },
-  { label: "Password :", type: "password", name: "password", placeholder: "Enter your password" }
-];
-
-const signupFields = [
-  { label: "Email :", type: "email", name: "email", placeholder: "Enter your email" },
-  { label: "User Name :", type: "text", name: "username", placeholder: "Enter your username" },
-  { label: "Password :", type: "password", name: "password", placeholder: "Enter your password" }
-];
 
 function LoginComp({ setLoggedIn }) {
   const [signupMode, setSignupMode] = useState(false);
   const [message, setMessage] = useState("");
+  const [currentLanguage, setCurrentLanguage] = useState('');
+  const { t,i18n } = useTranslation();
   const history = useHistory();
   const location = useLocation();
+
+  
+  // Define translated login and signup fields
+  const loginFields = [
+    { label: t("User Name :"), type: "text", name: "username", placeholder: t("Enter your username") },
+    { label: t("Password :"), type: "password", name: "password", placeholder: t("Enter your password") }
+  ];
+
+  const signupFields = [
+    { label: t("Email :"), type: "email", name: "email", placeholder: t("Enter your email") },
+    { label: t("User Name :"), type: "text", name: "username", placeholder: t("Enter your username") },
+    { label: t("Password :"), type: "password", name: "password", placeholder: t("Enter your password") }
+  ];
+
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -52,18 +59,25 @@ function LoginComp({ setLoggedIn }) {
     }
   };
 
+   // Determine the form alignment based on language direction
+   const formAlignmentClass = i18n.language === 'he' ? 'login-form-right' : 'login-form-left';
+
+
   return (
     <div className='sidebar'>
-      <div className="logo-container">
-        <img src={Logo} alt="Logo" className="logo" />
+       <div className="logo-lang-container">
+        <div className="logo-container">
+          <img src={Logo} alt="Logo" className="logo" />
+        </div>
+        <LanguageSelector onLanguageChange={setCurrentLanguage} />
       </div>
-      <div className="main-page">
-        <Form
+      <div className={`main-page ${formAlignmentClass}`}> {/* Apply the appropriate alignment class */}
+      <Form
           onSubmit={signupMode ? handleSignup : handleLogin}
           message={message}
           fields={signupMode ? signupFields : loginFields}
-          buttonText={signupMode ? "Sign Up" : "Login"}
-          actionText={signupMode ? "Create your account" : "Log in to your account"}
+          buttonText={signupMode ? t("signup") : t("login")}
+          actionText={signupMode ? t("Create your account") : t("Log in to your account")}
           onActionClick={() => setSignupMode(!signupMode)}
         />
       </div>
